@@ -39,7 +39,18 @@
     <div>
         <h1>24岁生日快乐！</h1>
         <p>亲爱的小婷猪，祝你生日快乐！在这特殊的日子里，让热爱漫无边际!<br>祝你的生日和未来的每一天都洋溢着爱和快乐。</p>
-        <img src="final.jpg" alt="生日快乐！">
+        <img id="birthdayImage" src="final.jpg" alt="生日快乐！">
     </div>
+    <script>
+        let clickCount = 0;
+        const images = ["new.jpg", "newnew.jpg"]; 
+
+        document.body.ondblclick = function() {
+            if (clickCount < images.length) {
+                document.getElementById("birthdayImage").src = images[clickCount];
+                clickCount++;
+            }
+        }
+    </script>
 </body>
 </html>
